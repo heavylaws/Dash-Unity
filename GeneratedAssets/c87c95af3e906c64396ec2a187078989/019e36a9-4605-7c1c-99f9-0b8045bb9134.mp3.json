@@ -1,0 +1,15 @@
+{
+    "asset": "c87c95af3e906c64396ec2a187078989",
+    "fileName": "019e36a9-4605-7c1c-99f9-0b8045bb9134.mp3",
+    "prompt": "High-tempo synthwave 80s retro music loop for an endless runner, driving bassline, neon vibes, 120 BPM",
+    "negativePrompt": "",
+    "model": "google-lyria-3-clip",
+    "modelName": "Google Lyria 3 Clip",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

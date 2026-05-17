@@ -1,0 +1,15 @@
+{
+    "asset": "89c4c1c1ca7f26b4ea48a76c1f3a2917",
+    "fileName": "019e3710-6a27-7cce-b286-cfe33292222a.wav",
+    "prompt": "a high speed futuristic sci-fi dash whoosh sound effect, electronic and snappy",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}
