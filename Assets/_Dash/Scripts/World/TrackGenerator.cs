@@ -24,6 +24,8 @@ public class TrackGenerator : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance != null && !GameManager.Instance.IsPlaying) return;
+
         if (playerTransform.position.z - 20 > (spawnZ - numberOfTiles * tileLength))
         {
             SpawnTile(false);
