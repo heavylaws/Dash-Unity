@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel;
     
     private float score = 0;
-    private bool isGameOver = false;
+    private bool isGameOver => IsGameOverState;
 
     private GameState _currentState;
     public GameState CurrentState => _currentState;
@@ -97,7 +97,6 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         if (isGameOver) return;
-        isGameOver = true;
         SetState(GameState.GameOver);
         
         StartCoroutine(DeathSequence());
