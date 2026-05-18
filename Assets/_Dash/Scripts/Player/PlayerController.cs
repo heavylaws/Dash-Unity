@@ -66,6 +66,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance == null || !GameManager.Instance.IsPlaying) return;
+
         if (isDashing)
         {
             dashTimeRemaining -= Time.deltaTime;

@@ -30,12 +30,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1f;
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
         
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
 
-        SetState(GameState.Playing);
+        SetState(GameState.Ready);
     }
 
     private void SetState(GameState newState)
@@ -55,10 +56,22 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        score += Time.deltaTime * 10;
-        if (scoreText != null)
+        if (IsReady)
         {
-            scoreText.text = "SCORE: " + Mathf.FloorToInt(score).ToString();
+            if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame || 
+                UnityEngine.InputSystem.Keyboard.current.enterKey.wasPressedThisFrame)
+            {
+                SetState(GameState.Playing);
+            }
+        }
+
+        if (IsPlaying)
+        {
+            score += Time.deltaTime * 10;
+            if (scoreText != null)
+            {
+                scoreText.text = "SCORE: " + Mathf.FloorToInt(score).ToString();
+            }
         }
     }
 
