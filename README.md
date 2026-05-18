@@ -4,7 +4,7 @@
 Dash-Unity is a 3-lane endless runner / rhythm dash game. The player runs forward automatically, switches lanes, jumps, and dashes through obstacles while the world reacts to music.
 
 ## Current Status
-Prototype / early MVP. Project organization (Phase 1D) completed.
+Prototype / early MVP. Core game state flow (Phase 2A) completed.
 
 ## Project Structure
 Game-owned assets are organized under `Assets/_Dash`:
@@ -33,23 +33,28 @@ The following assets intentionally remain in their original locations for engine
 The player runs forward automatically, switches lanes, jumps, and dashes through obstacles while the world reacts to music.
 
 ## Current Implemented Features
+- GameManager-driven GameState (Ready, Playing, Paused, GameOver)
+- Start flow from Ready state (Space/Enter)
+- Pause/Resume system (Escape/P)
 - 3-lane movement
 - Jump
 - Dash
 - Obstacle collision
-- Endless track generation
+- Endless track generation (gated by game state)
 - Score system
-- Game over UI
-- Restart with R
+- Game over UI alignment with state
+- Restart with R (after GameOver)
 - Camera follow
 - Background music
 - Music-reactive system foundation
 - Clean project structure (`Assets/_Dash`)
 
 ## Current Controls
-- **A/D or Left/Right arrows**: lane movement
-- **Space**: jump
-- **Left Shift**: dash
+- **Space / Enter**: start game (from Ready state)
+- **Escape / P**: pause or resume game
+- **A / D or Left / Right arrows**: lane movement
+- **Space**: jump (when Playing)
+- **Left Shift**: dash (when Playing)
 - **R**: restart after game over
 
 ## Main Playable Scene

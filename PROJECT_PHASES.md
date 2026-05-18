@@ -15,13 +15,14 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 - Phase 1B: Project Documentation and AI Development Log
 - Phase 1C: Safe Project Structure Planning
 - Phase 1D: Assets and Script Migration to _Dash
+- Phase 1E: Documentation Update and Project Checkpoint
+- Phase 2A: Core Game State Flow
 
 ## Current Active Phase
-- Phase 1E: Documentation Update and Project Checkpoint
+- Phase 2B: UI Feedback Planning (Planning Only)
 
 ## Upcoming Phases
-- Phase 2A: Core Game State Flow
-- Phase 2B: Enhanced Obstacles and Lanes
+- Phase 2C: Enhanced Obstacles and Lanes
 - Phase 3: Player Feel Polish
 - Phase 4: Track and Obstacle Design
 - Phase 5: Object Pooling and Performance
@@ -58,9 +59,13 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 
 ### Phase 2A: Core Game State Flow
 - **Goal**: Create a proper game state flow for Ready, Playing, Paused, GameOver, and Restart behavior.
-- **Done**: State machine or manager-driven flow implemented and verified without full menu scene.
+- **Done**: State machine in GameManager implements Ready, Playing, Paused, and GameOver. Controls gated by state. Main branch remains playable.
 
-### Phase 2B: Enhanced Obstacles and Lanes
+### Phase 2B: UI Feedback Planning
+- **Goal**: Plan UI feedback for Ready, Paused, and GameOver states.
+- **Done**: Implementation plan for UI overlays (Ready text, Pause screen, GameOver screen) created and approved. *Note: No implementation in this sub-phase.*
+
+### Phase 2C: Enhanced Obstacles and Lanes
 - **Goal**: Add variety to obstacles and lane challenges.
 - **Done**: New obstacle types and lane logic verified.
 

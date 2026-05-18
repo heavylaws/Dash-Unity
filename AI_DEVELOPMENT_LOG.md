@@ -18,5 +18,12 @@ This project is used to test Unity AI Assistant as the main implementation agent
 | 2025-05-23 | Phase 1D-5 Audio Migration | Move audio | Moved audio files to _Dash/Audio | Audio moved | Success | None | None | 10/10 | Phase 1D-6 |
 | 2025-05-23 | Phase 1D-6 Shader/Doc Migration | Move shader/doc | Moved NeonGrid and doc to _Dash | Assets moved | Success | None | None | 10/10 | Phase 1D Audit |
 | 2025-05-23 | Phase 1D Final Audit | Verification | Audit project health | N/A | Passed | None | None | 10/10 | Phase 1E |
+| 2026-05-18 | Phase 2A-1 Game State Ownership | Implement GameState in GameManager | Modified GameManager.cs to own GameState enum | Scripts | Success | None | None | 10/10 | Phase 2A-2 |
+| 2026-05-18 | Phase 2A-2 Ready State Start Flow | Start flow from Ready | Modified GameManager.cs and PlayerController.cs | Scripts | Success | None | None | 10/10 | Phase 2A-3 |
+| 2026-05-18 | Phase 2A-3 Pause Resume Flow | Pause system | Implemented Escape/P toggle in GameManager | Scripts | Success | None | None | 10/10 | Phase 2A-4 |
+| 2026-05-18 | Phase 2A-4 TrackGenerator State Gate | State gating | Gated TrackGenerator runtime updates by GameState | Scripts | Success | None | None | 10/10 | Phase 2A-5 |
+| 2026-05-18 | Phase 2A-5 GameOver Consistency | State alignment | Aligned GameOver state with game over flag | Scripts | Success | None | None | 10/10 | Phase 2A-6 |
+| 2026-05-18 | Phase 2A-6 Documentation | Update docs | Updated README, LOG, and PHASES | Docs | Success | None | None | 10/10 | Phase 2B Planning |
 
 *Note: For Phase 1A, the scene was restored by adding Canvas components, EventSystem, GameManager wiring, and UI references.*
+*Note: Phase 2A included code and documentation changes only. No scene, prefab, material, shader, or audio assets were modified.*
