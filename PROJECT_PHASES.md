@@ -13,10 +13,15 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 - Phase 0: Baseline Audit
 - Phase 1A: Scene Restoration and Basic Game Loop Repair
 - Phase 1B: Project Documentation and AI Development Log
+- Phase 1C: Safe Project Structure Planning
+- Phase 1D: Assets and Script Migration to _Dash
+
+## Current Active Phase
+- Phase 1E: Documentation Update and Project Checkpoint
 
 ## Upcoming Phases
-- Phase 1C: Safe Project Structure Planning
-- Phase 2: Core Game Loop Expansion
+- Phase 2A: Core Game State Flow
+- Phase 2B: Enhanced Obstacles and Lanes
 - Phase 3: Player Feel Polish
 - Phase 4: Track and Obstacle Design
 - Phase 5: Object Pooling and Performance
@@ -43,7 +48,19 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 - **Goal**: Plan folder structure and namespace conventions.
 - **Done**: Structure plan approved.
 
-### Phase 2: Core Game Loop Expansion
+### Phase 1D: Assets and Script Migration to _Dash
+- **Goal**: Organize game-owned assets into a safe, dedicated folder.
+- **Done**: Scripts, prefabs, materials, audio, shaders, and docs moved to `Assets/_Dash`. References verified.
+
+### Phase 1E: Documentation Update and Project Checkpoint
+- **Goal**: Reflect project changes in documentation.
+- **Done**: README.md, AI_DEVELOPMENT_LOG.md, and PROJECT_PHASES.md updated.
+
+### Phase 2A: Core Game State Flow
+- **Goal**: Create a proper game state flow for Ready, Playing, Paused, GameOver, and Restart behavior.
+- **Done**: State machine or manager-driven flow implemented and verified without full menu scene.
+
+### Phase 2B: Enhanced Obstacles and Lanes
 - **Goal**: Add variety to obstacles and lane challenges.
 - **Done**: New obstacle types and lane logic verified.
 

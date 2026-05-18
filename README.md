@@ -4,7 +4,24 @@
 Dash-Unity is a 3-lane endless runner / rhythm dash game. The player runs forward automatically, switches lanes, jumps, and dashes through obstacles while the world reacts to music.
 
 ## Current Status
-Prototype / early MVP
+Prototype / early MVP. Project organization (Phase 1D) completed.
+
+## Project Structure
+Game-owned assets are organized under `Assets/_Dash`:
+- `Assets/_Dash/Scripts/`: Game logic (Core, Player, World, Audio, Camera).
+- `Assets/_Dash/Prefabs/`: Game objects (Obstacles, Track, Player, Managers, UI).
+- `Assets/_Dash/Materials/`: Custom materials.
+- `Assets/_Dash/Audio/`: Music and sound effects.
+- `Assets/_Dash/Shaders/`: Custom shaders.
+- `Assets/_Dash/Documentation/`: Internal project documentation.
+
+The following assets intentionally remain in their original locations for engine or third-party compatibility:
+- `Assets/Scenes/SampleScene.unity` (Main Playable Scene)
+- `Assets/Settings/`
+- `Assets/InputSystem_Actions.inputactions`
+- `Assets/TextMesh Pro/`
+- `Assets/AI Toolkit/`
+- `Assets/TutorialInfo/`
 
 ## Unity Version
 6000.4.7f1
@@ -27,6 +44,7 @@ The player runs forward automatically, switches lanes, jumps, and dashes through
 - Camera follow
 - Background music
 - Music-reactive system foundation
+- Clean project structure (`Assets/_Dash`)
 
 ## Current Controls
 - **A/D or Left/Right arrows**: lane movement
