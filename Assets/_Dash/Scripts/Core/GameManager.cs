@@ -56,6 +56,25 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        // Handle Pause/Resume
+        if (IsPlaying || IsPaused)
+        {
+            if (UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame || 
+                UnityEngine.InputSystem.Keyboard.current.pKey.wasPressedThisFrame)
+            {
+                if (IsPlaying)
+                {
+                    SetState(GameState.Paused);
+                    Time.timeScale = 0f;
+                }
+                else if (IsPaused)
+                {
+                    SetState(GameState.Playing);
+                    Time.timeScale = 1f;
+                }
+            }
+        }
+
         if (IsReady)
         {
             if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame || 
