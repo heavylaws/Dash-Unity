@@ -24,6 +24,12 @@ This project is used to test Unity AI Assistant as the main implementation agent
 | 2026-05-18 | Phase 2A-4 TrackGenerator State Gate | State gating | Gated TrackGenerator runtime updates by GameState | Scripts | Success | None | None | 10/10 | Phase 2A-5 |
 | 2026-05-18 | Phase 2A-5 GameOver Consistency | State alignment | Aligned GameOver state with game over flag | Scripts | Success | None | None | 10/10 | Phase 2A-6 |
 | 2026-05-18 | Phase 2A-6 Documentation | Update docs | Updated README, LOG, and PHASES | Docs | Success | None | None | 10/10 | Phase 2B Planning |
+| 2026-05-19 | Phase 2B-0 UI Feedback Planning | Plan UI feedback | Created implementation plan for UI overlays | N/A | Approved | None | None | 10/10 | Phase 2B-1 |
+| 2026-05-19 | Phase 2B-1 Ready UI | Add Ready UI | Added ReadyPanel and ReadyText | Scene, Scripts | Success | None | None | 10/10 | Phase 2B-2 |
+| 2026-05-19 | Phase 2B-2 Pause UI | Add Pause UI | Added PausePanel and PauseText | Scene, Scripts | Success | None | None | 10/10 | Phase 2B-3 |
+| 2026-05-19 | Phase 2B-3 GameOver UI Verification | Verify GameOver UI | Verified existing GameOverPanel text and behavior | None | Passed | None | None | 10/10 | Phase 2B-4 |
+| 2026-05-19 | Phase 2B-4 Documentation | Update docs | Updated README, LOG, and PHASES | Docs | Success | None | None | 10/10 | Phase 2C Planning |
 
 *Note: For Phase 1A, the scene was restored by adding Canvas components, EventSystem, GameManager wiring, and UI references.*
 *Note: Phase 2A included code and documentation changes only. No scene, prefab, material, shader, or audio assets were modified.*
+*Note: Phase 2B-3 produced no code or scene changes (verification only). Ready UI and Pause UI involved SampleScene and GameManager updates.*
