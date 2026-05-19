@@ -11,6 +11,7 @@ public class TrackGenerator : MonoBehaviour
     public float spawnZ = 0f;
     public float obstacleFrequency = 0.3f;
     [SerializeField] private float laneWidth = 3f;
+    [SerializeField] private float patternChance = 0.2f;
 
     private const int MinLane = -1;
     private const int MaxLane = 1;
@@ -56,15 +57,23 @@ public class TrackGenerator : MonoBehaviour
 
     private void SpawnObstacle(float zPos)
     {
-        int lane = GetRandomLane();
-
-        if (lane == lastObstacleLane && sameLaneStreak >= MaxSameLaneStreak)
+        if (Random.value < patternChance)
         {
-            lane = GetRandomLaneAvoiding(lane);
+            int openLane = GetRandomLane();
+            SpawnTwoLanePattern(openLane, zPos);
         }
+        else
+        {
+            int lane = GetRandomLane();
 
-        RegisterObstacleLane(lane);
-        SpawnObstacleInLane(lane, zPos);
+            if (lane == lastObstacleLane && sameLaneStreak >= MaxSameLaneStreak)
+            {
+                lane = GetRandomLaneAvoiding(lane);
+            }
+
+            RegisterObstacleLane(lane);
+            SpawnObstacleInLane(lane, zPos);
+        }
     }
 
     private void SpawnObstacleInLane(int lane, float zPos)
