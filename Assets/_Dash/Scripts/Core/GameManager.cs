@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject gameOverPanel;
     public GameObject readyPanel;
+    public GameObject pausePanel;
     
     private float score = 0;
     private bool isGameOver => IsGameOverState;
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         _currentState = newState;
         if (readyPanel != null) readyPanel.SetActive(_currentState == GameState.Ready);
+        if (pausePanel != null) pausePanel.SetActive(_currentState == GameState.Paused);
     }
 
     private void Update()
