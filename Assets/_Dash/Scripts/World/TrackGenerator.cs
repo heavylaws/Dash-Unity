@@ -12,6 +12,9 @@ public class TrackGenerator : MonoBehaviour
     public float obstacleFrequency = 0.3f;
     [SerializeField] private float laneWidth = 3f;
 
+    private const int MinLane = -1;
+    private const int MaxLane = 1;
+
     private List<GameObject> activeTiles = new List<GameObject>();
     private List<GameObject> activeObstacles = new List<GameObject>();
 
@@ -49,10 +52,15 @@ public class TrackGenerator : MonoBehaviour
 
     private void SpawnObstacle(float zPos)
     {
-        int lane = Random.Range(-1, 2);
+        int lane = GetRandomLane();
         Vector3 pos = new Vector3(lane * laneWidth, 1f, zPos);
         GameObject obs = Instantiate(obstaclePrefab, pos, Quaternion.identity);
         activeObstacles.Add(obs);
+    }
+
+    private int GetRandomLane()
+    {
+        return Random.Range(MinLane, MaxLane + 1);
     }
 
     private void DeleteTile()
