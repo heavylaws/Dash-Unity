@@ -23,6 +23,10 @@ public class TrackGenerator : MonoBehaviour
     private int sameLaneStreak = 0;
     private const int MaxSameLaneStreak = 2;
 
+    private int lastPatternOpenLane = int.MinValue;
+    private int samePatternOpenLaneStreak = 0;
+    private const int MaxSamePatternOpenLaneStreak = 2;
+
     void Start()
     {
         for (int i = 0; i < numberOfTiles; i++)
@@ -59,7 +63,7 @@ public class TrackGenerator : MonoBehaviour
     {
         if (Random.value < patternChance)
         {
-            int openLane = GetRandomLane();
+            int openLane = GetPatternOpenLane();
             SpawnTwoLanePattern(openLane, zPos);
         }
         else
@@ -91,6 +95,32 @@ public class TrackGenerator : MonoBehaviour
             {
                 SpawnObstacleInLane(lane, zPos);
             }
+        }
+    }
+
+    private int GetPatternOpenLane()
+    {
+        int openLane = GetRandomLane();
+
+        if (openLane == lastPatternOpenLane && samePatternOpenLaneStreak >= MaxSamePatternOpenLaneStreak)
+        {
+            openLane = GetRandomLaneAvoiding(openLane);
+        }
+
+        RegisterPatternOpenLane(openLane);
+        return openLane;
+    }
+
+    private void RegisterPatternOpenLane(int openLane)
+    {
+        if (openLane == lastPatternOpenLane)
+        {
+            samePatternOpenLaneStreak++;
+        }
+        else
+        {
+            lastPatternOpenLane = openLane;
+            samePatternOpenLaneStreak = 1;
         }
     }
 
