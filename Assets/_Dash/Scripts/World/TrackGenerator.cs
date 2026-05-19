@@ -18,6 +18,10 @@ public class TrackGenerator : MonoBehaviour
     private List<GameObject> activeTiles = new List<GameObject>();
     private List<GameObject> activeObstacles = new List<GameObject>();
 
+    private int lastObstacleLane = int.MinValue;
+    private int sameLaneStreak = 0;
+    private const int MaxSameLaneStreak = 2;
+
     void Start()
     {
         for (int i = 0; i < numberOfTiles; i++)
@@ -53,6 +57,14 @@ public class TrackGenerator : MonoBehaviour
     private void SpawnObstacle(float zPos)
     {
         int lane = GetRandomLane();
+
+        if (lane == lastObstacleLane && sameLaneStreak >= MaxSameLaneStreak)
+        {
+            lane = GetRandomLaneAvoiding(lane);
+        }
+
+        RegisterObstacleLane(lane);
+
         Vector3 pos = new Vector3(lane * laneWidth, 1f, zPos);
         GameObject obs = Instantiate(obstaclePrefab, pos, Quaternion.identity);
         activeObstacles.Add(obs);
@@ -61,6 +73,29 @@ public class TrackGenerator : MonoBehaviour
     private int GetRandomLane()
     {
         return Random.Range(MinLane, MaxLane + 1);
+    }
+
+    private int GetRandomLaneAvoiding(int laneToAvoid)
+    {
+        int lane = GetRandomLane();
+        while (lane == laneToAvoid)
+        {
+            lane = GetRandomLane();
+        }
+        return lane;
+    }
+
+    private void RegisterObstacleLane(int lane)
+    {
+        if (lane == lastObstacleLane)
+        {
+            sameLaneStreak++;
+        }
+        else
+        {
+            lastObstacleLane = lane;
+            sameLaneStreak = 1;
+        }
     }
 
     private void DeleteTile()
