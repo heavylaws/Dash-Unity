@@ -18,12 +18,12 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 - Phase 1E: Documentation Update and Project Checkpoint
 - Phase 2A: Core Game State Flow
 - Phase 2B: UI Feedback
+- Phase 2C: Enhanced Obstacles and Lanes
 
 ## Current Active Phase
-- Phase 2C: Enhanced Obstacles and Lanes (Planning Only)
+- Phase 3: Player Feel Polish (Planning Only)
 
 ## Upcoming Phases
-- Phase 2C: Enhanced Obstacles and Lanes
 - Phase 3: Player Feel Polish
 - Phase 4: Track and Obstacle Design
 - Phase 5: Object Pooling and Performance
@@ -68,11 +68,11 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 
 ### Phase 2C: Enhanced Obstacles and Lanes
 - **Goal**: Add variety to obstacles and lane challenges.
-- **Done**: New obstacle types and lane logic verified. Phase 2C begins with planning for safer lane design and obstacle variety. *Note: No object pooling or mobile controls yet.*
+- **Done**: TrackGenerator uses a serialized laneWidth field. Lane selection is centralized. Single obstacles avoid excessive same-lane streaks. Two-lane obstacle patterns spawn occasionally with one-open-lane safety. Pattern open lanes avoid repeated streaks. Existing prefab reused. *Note: No object pooling or mobile controls.*
 
 ### Phase 3: Player Feel Polish
 - **Goal**: Improve movement, jump, and dash feedback.
-- **Done**: Smoother controls and visual feedback.
+- **Done**: Planning and implementation pending. Phase 3 begins with planning only.
 
 ### Phase 4: Track and Obstacle Design
 - **Goal**: Create reusable track segments and patterns.
