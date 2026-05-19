@@ -64,10 +64,25 @@ public class TrackGenerator : MonoBehaviour
         }
 
         RegisterObstacleLane(lane);
+        SpawnObstacleInLane(lane, zPos);
+    }
 
+    private void SpawnObstacleInLane(int lane, float zPos)
+    {
         Vector3 pos = new Vector3(lane * laneWidth, 1f, zPos);
         GameObject obs = Instantiate(obstaclePrefab, pos, Quaternion.identity);
         activeObstacles.Add(obs);
+    }
+
+    private void SpawnTwoLanePattern(int openLane, float zPos)
+    {
+        for (int lane = MinLane; lane <= MaxLane; lane++)
+        {
+            if (lane != openLane)
+            {
+                SpawnObstacleInLane(lane, zPos);
+            }
+        }
     }
 
     private int GetRandomLane()
