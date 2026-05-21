@@ -8,9 +8,9 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float laneWidth = 3f;
     [SerializeField] private float moveSpeed = 15f;
-    [SerializeField] private float laneChangeSpeed = 0.05f; // Faster for snappiness
-    [SerializeField] private float tiltAmount = 20f;
-    [SerializeField] private float tiltSpeed = 10f;
+    [SerializeField] private float laneChangeSpeed = 0.08f; // Tuned for fluid responsiveness
+    [SerializeField] private float tiltAmount = 15f;
+    [SerializeField] private float tiltSpeed = 8f;
 
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 8f;

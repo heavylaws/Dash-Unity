@@ -6301,9 +6301,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   laneWidth: 3
   moveSpeed: 10
-  laneChangeSpeed: 0.05
-  tiltAmount: 20
-  tiltSpeed: 10
+  laneChangeSpeed: 0.08
+  tiltAmount: 15
+  tiltSpeed: 8
   jumpForce: 8
   gravity: -20
   dashSpeedBoost: 30
