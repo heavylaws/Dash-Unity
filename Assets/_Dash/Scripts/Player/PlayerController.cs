@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tiltSpeed = 8f;
 
     [Header("Jump Settings")]
-    [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float gravity = -20f;
+    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float gravity = -30f;
 
     [Header("Dash Settings")]
     [SerializeField] private float dashSpeedBoost = 30f;
