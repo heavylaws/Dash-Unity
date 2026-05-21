@@ -6,10 +6,10 @@ public class TrackGenerator : MonoBehaviour
     public GameObject tilePrefab;
     public GameObject obstaclePrefab;
     public Transform playerTransform;
-    public int numberOfTiles = 15;
-    public float tileLength = 10f;
+    public int numberOfTiles = 20;
+    public float tileLength = 50f;
     public float spawnZ = 0f;
-    public float obstacleFrequency = 0.3f;
+    public float obstacleFrequency = 0.4f;
     [SerializeField] private float laneWidth = 3f;
     [SerializeField] private float patternChance = 0.2f;
 
