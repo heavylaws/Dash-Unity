@@ -19,18 +19,18 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 - Phase 2A: Core Game State Flow
 - Phase 2B: UI Feedback
 - Phase 2C: Enhanced Obstacles and Lanes
+- Phase 3: Player Feel Polish
 
 ## Current Active Phase
-- Phase 3: Player Feel Polish (Planning Only)
+- Phase 4: Track Patterns and Object Pooling (Planning Only)
 
 ## Upcoming Phases
-- Phase 3: Player Feel Polish
-- Phase 4: Track and Obstacle Design
-- Phase 5: Object Pooling and Performance
-- Phase 6: Audio and Music-Reactive Polish
-- Phase 7: UI/UX Polish
-- Phase 8: Visual Identity
-- Phase 9: Build, Test, and Release
+- Phase 4: Track Patterns and Object Pooling
+- Phase 5: Audio and Music-Reactive Polish
+- Phase 6: UI/UX Polish
+- Phase 7: Visual Identity
+- Phase 8: Build, Test, and Release
+- Phase 9: Final Polish
 
 ## Phase Definitions and Done Criteria
 
@@ -72,28 +72,28 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 
 ### Phase 3: Player Feel Polish
 - **Goal**: Improve movement, jump, and dash feedback.
-- **Done**: Planning and implementation pending. Phase 3 begins with planning only.
+- **Done**: Lane switching is smooth and responsive with visual tilt. Jump feel is snappy with high gravity. Dash is balanced and readable. Camera FOV reacts to gameplay state and remains bounded. All player movement and world generation correctly gated by game state.
 
-### Phase 4: Track and Obstacle Design
-- **Goal**: Create reusable track segments and patterns.
-- **Done**: Pattern system implemented.
+### Phase 4: Track Patterns and Object Pooling
+- **Goal**: Create reusable track segments and optimize performance.
+- **Done**: Planning pending. Phase 4 must begin with a planning-only audit before any implementation.
 
-### Phase 5: Object Pooling and Performance
-- **Goal**: Optimize track generation.
-- **Done**: No allocations during gameplay for track/obstacles.
-
-### Phase 6: Audio and Music-Reactive Polish
+### Phase 5: Audio and Music-Reactive Polish
 - **Goal**: Integrate music and reactive visuals.
 - **Done**: World reacts to BPM and frequency bands.
 
-### Phase 7: UI/UX Polish
+### Phase 6: UI/UX Polish
 - **Goal**: Professional UI menus and HUD.
 - **Done**: Main menu, Settings, and polished HUD.
 
-### Phase 8: Visual Identity
+### Phase 7: Visual Identity
 - **Goal**: Apply consistent art style and lighting.
 - **Done**: Materials, shaders, and lighting finalized.
 
-### Phase 9: Build, Test, and Release
+### Phase 8: Build, Test, and Release
 - **Goal**: Final testing and build production.
 - **Done**: Clean build for target platform.
+
+### Phase 9: Final Polish
+- **Goal**: Final project refinement.
+- **Done**: Project ready for release.

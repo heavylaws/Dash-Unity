@@ -39,6 +39,13 @@ This project is used to test Unity AI Assistant as the main implementation agent
 | 2026-05-19 | Phase 2C-7 Open Lane Safety | Pattern open lane safety | Implemented MaxSamePatternOpenLaneStreak | TrackGenerator.cs | Success | None | None | 10/10 | Phase 2C-8 |
 | 2026-05-19 | Phase 2C-8 Verification | Balance Audit | Verified pattern fairness and safety | N/A | Success | None | None | 10/10 | Phase 2C-9 |
 | 2026-05-19 | Phase 2C-9 Documentation | Final documentation update | Updated README, LOG, and PHASES | Docs | Success | None | None | 10/10 | Phase 3 Planning |
+| 2026-05-20 | Phase 3-0 Planning | Player Feel Audit | Identified polish targets for lanes, jump, dash, and camera | N/A | Success | None | None | 10/10 | Phase 3A |
+| 2026-05-20 | Phase 3A Lane Switch | Tune lane switch feel | Optimized laneChangeSpeed and tilt (1fb0ca6) | Scripts | Success | None | None | 10/10 | Phase 3B |
+| 2026-05-21 | Phase 3B Jump Polish | Tune jump feel | Optimized jumpForce and gravity (ff48674) | Scripts | Success | None | None | 10/10 | Phase 3C |
+| 2026-05-21 | Phase 3C Dash Polish | Tune dash feel | Optimized dashSpeedBoost and duration (88f46a7) | Scripts | Success | None | None | 10/10 | Phase 3D |
+| 2026-05-21 | Phase 3D Camera FOV | Stabilize camera FOV | Implemented state-aware FOV growth (b37120d) | Scripts | Success | None | None | 10/10 | Phase 3E |
+| 2026-05-21 | Phase 3E Playtest | Balance Verification | Verified all player feel changes and game state gating | N/A | Success | None | None | 10/10 | Phase 3F |
+| 2026-05-21 | Phase 3F Documentation | Documentation Update | Updated README, LOG, and PHASES | Docs | Success | None | None | 10/10 | Phase 4 Planning |
 
 *Note: For Phase 1A, the scene was restored by adding Canvas components, EventSystem, GameManager wiring, and UI references.*
 *Note: Phase 2A included code and documentation changes only. No scene, prefab, material, shader, or audio assets were modified.*
