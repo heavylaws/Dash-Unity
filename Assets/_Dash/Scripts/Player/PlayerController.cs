@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity = -30f;
 
     [Header("Dash Settings")]
-    [SerializeField] private float dashSpeedBoost = 30f;
-    [SerializeField] private float dashDuration = 0.25f;
+    [SerializeField] private float dashSpeedBoost = 25f;
+    [SerializeField] private float dashDuration = 0.3f;
     [SerializeField] private float dashCooldown = 1.5f;
     [SerializeField] private UnityEngine.Rendering.Universal.DecalProjector dashDecal;
     [SerializeField] private AudioClip dashSound;

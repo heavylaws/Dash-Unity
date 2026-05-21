@@ -6306,8 +6306,8 @@ MonoBehaviour:
   tiltSpeed: 8
   jumpForce: 10
   gravity: -30
-  dashSpeedBoost: 30
-  dashDuration: 0.25
+  dashSpeedBoost: 25
+  dashDuration: 0.3
   dashCooldown: 1.5
   dashDecal: {fileID: 1964602098}
   dashSound: {fileID: 8300000, guid: 89c4c1c1ca7f26b4ea48a76c1f3a2917, type: 3}
