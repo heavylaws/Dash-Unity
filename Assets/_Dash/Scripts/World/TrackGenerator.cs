@@ -53,18 +53,18 @@ public class TrackGenerator : MonoBehaviour
 
         if (!empty && Random.value < obstacleFrequency)
         {
-            SpawnObstacle(spawnZ);
+            SpawnObstacle(spawnZ, go.transform);
         }
 
         spawnZ += tileLength;
     }
 
-    private void SpawnObstacle(float zPos)
+    private void SpawnObstacle(float zPos, Transform parent)
     {
         if (Random.value < patternChance)
         {
             int openLane = GetPatternOpenLane();
-            SpawnTwoLanePattern(openLane, zPos);
+            SpawnTwoLanePattern(openLane, zPos, parent);
         }
         else
         {
@@ -76,24 +76,24 @@ public class TrackGenerator : MonoBehaviour
             }
 
             RegisterObstacleLane(lane);
-            SpawnObstacleInLane(lane, zPos);
+            SpawnObstacleInLane(lane, zPos, parent);
         }
     }
 
-    private void SpawnObstacleInLane(int lane, float zPos)
+    private void SpawnObstacleInLane(int lane, float zPos, Transform parent)
     {
         Vector3 pos = new Vector3(lane * laneWidth, 1f, zPos);
-        GameObject obs = Instantiate(obstaclePrefab, pos, Quaternion.identity);
+        GameObject obs = Instantiate(obstaclePrefab, pos, Quaternion.identity, parent);
         activeObstacles.Add(obs);
     }
 
-    private void SpawnTwoLanePattern(int openLane, float zPos)
+    private void SpawnTwoLanePattern(int openLane, float zPos, Transform parent)
     {
         for (int lane = MinLane; lane <= MaxLane; lane++)
         {
             if (lane != openLane)
             {
-                SpawnObstacleInLane(lane, zPos);
+                SpawnObstacleInLane(lane, zPos, parent);
             }
         }
     }
