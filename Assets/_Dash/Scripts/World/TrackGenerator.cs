@@ -17,7 +17,6 @@ public class TrackGenerator : MonoBehaviour
     private const int MaxLane = 1;
 
     private List<GameObject> activeTiles = new List<GameObject>();
-    private List<GameObject> activeObstacles = new List<GameObject>();
 
     private int lastObstacleLane = int.MinValue;
     private int sameLaneStreak = 0;
@@ -83,8 +82,7 @@ public class TrackGenerator : MonoBehaviour
     private void SpawnObstacleInLane(int lane, float zPos, Transform parent)
     {
         Vector3 pos = new Vector3(lane * laneWidth, 1f, zPos);
-        GameObject obs = Instantiate(obstaclePrefab, pos, Quaternion.identity, parent);
-        activeObstacles.Add(obs);
+        Instantiate(obstaclePrefab, pos, Quaternion.identity, parent);
     }
 
     private void SpawnTwoLanePattern(int openLane, float zPos, Transform parent)
@@ -159,12 +157,5 @@ public class TrackGenerator : MonoBehaviour
             Destroy(activeTiles[0]);
             activeTiles.RemoveAt(0);
         }
-
-        // Cleanup obstacles that are behind the player or already destroyed
-        while (activeObstacles.Count > 0 && (activeObstacles[0] == null || activeObstacles[0].transform.position.z < playerTransform.position.z - 10f))
-        {
-            if (activeObstacles[0] != null) Destroy(activeObstacles[0]);
-            activeObstacles.RemoveAt(0);
         }
-    }
 }
