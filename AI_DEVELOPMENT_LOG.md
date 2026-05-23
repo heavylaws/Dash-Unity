@@ -46,6 +46,16 @@ This project is used to test Unity AI Assistant as the main implementation agent
 | 2026-05-21 | Phase 3D Camera FOV | Stabilize camera FOV | Implemented state-aware FOV growth (b37120d) | Scripts | Success | None | None | 10/10 | Phase 3E |
 | 2026-05-21 | Phase 3E Playtest | Balance Verification | Verified all player feel changes and game state gating | N/A | Success | None | None | 10/10 | Phase 3F |
 | 2026-05-21 | Phase 3F Documentation | Documentation Update | Updated README, LOG, and PHASES | Docs | Success | None | None | 10/10 | Phase 4 Planning |
+| 2026-05-22 | Phase 4-0 | Track Patterns and Pooling Planning | Audit track generation and lifecycle | N/A | Success | None | None | 10/10 | Phase 4A |
+| 2026-05-22 | Phase 4A | TrackGenerator Serialized Audit | Audit script vs scene defaults | N/A | Success | None | None | 10/10 | Phase 4B |
+| 2026-05-22 | Phase 4B | TrackGenerator Defaults Alignment | Align script defaults with scene (48f32d1) | Scripts | Success | None | None | 10/10 | Phase 4C |
+| 2026-05-22 | Phase 4C | Obstacle Lifecycle Parenting Audit | Audit parenting feasibility | N/A | Success | None | None | 10/10 | Phase 4D |
+| 2026-05-22 | Phase 4D | Parent Obstacles to Track Tiles | Parent obstacles to tiles (b7229d3) | Scripts | Success | None | None | 10/10 | Phase 4E |
+| 2026-05-22 | Phase 4E | Obstacle Parenting Playtest | Verify parenting behavior | N/A | Success | None | None | 10/10 | Phase 4F |
+| 2026-05-22 | Phase 4F | Active Obstacle Cleanup Audit | Audit redundant tracking | N/A | Success | None | None | 10/10 | Phase 4G |
+| 2026-05-22 | Phase 4G | Remove Redundant activeObstacles | Removed redundant list tracking (4a79c54) | Scripts | Success | None | None | 10/10 | Phase 4H |
+| 2026-05-22 | Phase 4H | Post-Cleanup Playtest Verification | Verify stability after cleanup | N/A | Success | None | None | 10/10 | Phase 4I |
+| 2026-05-22 | Phase 4I | Documentation Update | Update README, LOG, and PHASES | Docs | Success | None | None | 10/10 | Phase 4J |
 
 *Note: For Phase 1A, the scene was restored by adding Canvas components, EventSystem, GameManager wiring, and UI references.*
 *Note: Phase 2A included code and documentation changes only. No scene, prefab, material, shader, or audio assets were modified.*

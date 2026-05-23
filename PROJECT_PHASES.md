@@ -22,7 +22,7 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 - Phase 3: Player Feel Polish
 
 ## Current Active Phase
-- Phase 4: Track Patterns and Object Pooling (Planning Only)
+- Phase 4: Track Patterns and Object Pooling (In Progress)
 
 ## Upcoming Phases
 - Phase 4: Track Patterns and Object Pooling
@@ -76,7 +76,8 @@ Dash-Unity is a high-energy, music-reactive endless runner where the environment
 
 ### Phase 4: Track Patterns and Object Pooling
 - **Goal**: Create reusable track segments and optimize performance.
-- **Done**: Planning pending. Phase 4 must begin with a planning-only audit before any implementation.
+- **Done**: Track lifecycle cleanup completed. Script defaults aligned with scene values. Obstacles are now parented to their source track tiles. Redundant `activeObstacles` tracking removed. Hierarchy and lifecycle prepared for future pooling. *Note: Object pooling and pattern expansion are future work.*
+- **Next Step**: Phase 4J planning only (pooling feasibility or pattern expansion).
 
 ### Phase 5: Audio and Music-Reactive Polish
 - **Goal**: Integrate music and reactive visuals.
